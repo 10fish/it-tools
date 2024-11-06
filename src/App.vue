@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { RouterView, useRoute } from 'vue-router';
 import { NGlobalStyle, NMessageProvider, NNotificationProvider, darkTheme } from 'naive-ui';
 import { darkThemeOverrides, lightThemeOverrides } from './themes';
@@ -31,6 +33,8 @@ syncRef(
       </NNotificationProvider>
     </NMessageProvider>
   </n-config-provider>
+  <Analytics />
+  <SpeedInsights />
 </template>
 
 <style>
